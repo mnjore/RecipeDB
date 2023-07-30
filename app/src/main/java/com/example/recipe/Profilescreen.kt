@@ -85,12 +85,12 @@ private fun ProfileContent(recipe: Recipe, containerHeight: Dp) {
         ProfileProperty(stringResource(R.string.type), recipe.Type)
         ProfileProperty(stringResource(R.string.servings), recipe.Servings.toString())
         ProfileProperty(stringResource(R.string.difficulty), recipe.Difficulty)
-        ProfileProperty(stringResource(R.string.ingredients), recipe.Ingredients)
+        IngredientProperty(stringResource(R.string.ingredients), recipe.Ingredients)
         IngredientProperty(stringResource(R.string.steps), recipe.Steps)
 
         // Add a spacer that always shows part (320.dp) of the fields list regardless of the device,
         // in order to always leave some content at the top.
-        Spacer(Modifier.height((containerHeight - 320.dp).coerceAtLeast(0.dp)))
+        Spacer(Modifier.height((containerHeight - 1000.dp).coerceAtLeast(0.dp)))
     }
 }
 
